@@ -1,0 +1,293 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+            xmlns:th="http://www.thymeleaf.org" 
+            xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+            xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+	<!-- begin::Head -->
+	<head>
+		<meta charset="utf-8" />
+		<title>PT Duaz Solusi</title>
+		<meta name="description" content="Latest updates and statistic charts">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" th:href="@{/ui/metronic_v5/evan.ico}" type="image/x-icon"  />
+
+		<!--begin::Web font -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+			WebFont.load({
+				google: {
+					"families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]
+				},
+				active: function() {
+					sessionStorage.fonts = true;
+				}
+			});
+		</script>
+
+		<!--end::Web font -->
+
+		<!--begin::Base Styles -->
+		<link th:href="@{/ui/metronic_v5/assets/vendors/custom/jqvmap/jqvmap.bundle.css}" rel="stylesheet" type="text/css" />
+		<link th:href="@{/ui/metronic_v5/assets/vendors/base/vendors.bundle.css}" rel="stylesheet" type="text/css" />
+		<link th:href="@{/ui/metronic_v5/assets/demo/default/base/style.bundle.css}" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" th:href="@{/ui/w2ui-1.5.min.css}" />
+	</head>
+	<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--fixed m-aside-left--offcanvas m-aside-left--minimize m-brand--minimize m-footer--push m-aside--offcanvas-default">
+		<div class="m-grid m-grid--hor m-grid--root m-page">
+			 <div  th:insert="ptaz_header"></div>
+			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+				<button class="m-aside-left-close  m-aside-left-close--skin-dark " id="m_aside_left_close_btn">
+					<i class="la la-close"></i>
+				</button>				
+				<div  th:insert="ptaz_menu_left"></div>
+				
+				
+				
+				
+				
+				
+				<div class="m-grid__item m-grid__item--fluid m-wrapper">
+
+					<!-- BEGIN: Subheader -->
+					<div class="m-subheader ">
+						<div class="d-flex align-items-center">
+							<div class="mr-auto">
+								<h3 class="m-subheader__title m-subheader__title--separator">User List</h3>
+								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+									<li class="m-nav__item m-nav__item--home">
+										<a href="#" class="m-nav__link m-nav__link--icon">
+											<i class="m-nav__link-icon la la-home"></i>
+										</a>
+									</li>
+									<li class="m-nav__separator">-</li>
+									<li class="m-nav__item">
+										<a href="#" class="m-nav__link">
+											<span class="m-nav__link-text">Setting</span>
+										</a>
+									</li>
+									<li class="m-nav__separator">-</li>
+									<li class="m-nav__item">
+										<a href="#" class="m-nav__link">
+											<span class="m-nav__link-text">User list</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- END: Subheader -->
+					<div class="m-content">
+						<div class="m-portlet">
+						
+						
+						
+							<!-- 	<div class="m-portlet__head">
+									<div class="m-portlet__head-caption">
+										<div class="m-portlet__head-title">
+											<span class="m-portlet__head-icon">
+												<i class="la la-leaf"></i>
+											</span>
+											<h3 class="m-portlet__head-text">
+												Form Input
+											</h3>
+										</div>
+									</div>
+								</div>	 -->						
+								<div class="row" style="margin-bottom: 0px;"> 
+                                    <div class="col-sm-12" >
+                                        <div id="grid" style="width: 100%; height: 400px; overflow: hidden;"></div>
+                                    </div>
+                                </div>
+                                
+                                
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+					<div class="modal fade" id="m_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Update data user</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed" th:action="@{/user/update}"   id="frm" name="frm" method="post">
+										<div class="m-portlet__body">
+										
+										    <input type="hidden" th:name="id_seq" id="id_seq" class="form-control m-input" placeholder="Enter nama">
+										
+											<div class="form-group m-form__group row">
+												<div class="col-lg-4">
+													<label>Nama:</label>
+													<input type="text" th:name="nama"  id="nama" class="form-control m-input" placeholder="Enter nama">
+													<span class="m-form__help">Please enter your nama</span>
+												</div>
+												<div class="col-lg-4">
+													<label class="">Email:</label>
+													<input type="text" th:name="email"  id="email" class="form-control m-input" placeholder="Enter email">
+													<span class="m-form__help">Please enter your email</span>
+												</div>
+												<div class="col-lg-4">
+													<label class="">Katasandi:</label>
+													<input type="text" th:name="katasandi"  id="katasandi" class="form-control m-input" placeholder="Enter katasandi">
+													<span class="m-form__help">Please enter your katasandi</span>
+												</div>
+											</div>
+											
+										</div>
+										
+										
+										
+										<div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+											<div class="m-form__actions m-form__actions--solid" style="background-color: white;">
+												<div class="row">
+													<div class="col-lg-4"></div>
+													<div class="col-lg-12">
+														<button type="submit" class="btn btn-success m-btn m-btn--custom">Submit</button>
+														<button type="reset" class="btn btn-danger m-btn m-btn--custom">Cancel</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+									</form>
+								</div>
+							</div>
+						</div>
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			<div  th:insert="ptaz_footer"></div>
+		</div>
+		<div id="m_scroll_top" class="m-scroll-top">
+			<i class="la la-arrow-up"></i>
+		</div>
+		<div  th:insert="ptaz_sticky"></div>
+		
+		<script th:src="@{/ui/metronic_v5/assets/vendors/base/vendors.bundle.js}" type="text/javascript"></script>
+		<script th:src="@{/ui/metronic_v5/assets/demo/default/base/scripts.bundle.js}" type="text/javascript"></script>
+		<script th:src="@{/ui/metronic_v5/assets/vendors/custom/jqvmap/jqvmap.bundle.js}" type="text/javascript"></script>
+		<script th:src="@{/ui/metronic_v5/assets/demo/default/custom/components/maps/jqvmap.js}" type="text/javascript"></script>
+		
+		<script th:src="@{/ui/metronic_v5/assets/demo/default/custom/crud/forms/widgets/bootstrap-datepicker.js}" type="text/javascript"></script>	
+		<script th:src="@{/ui/metronic_v5/assets/demo/default/custom/crud/forms/validation/form-controls.js}" type="text/javascript"></script>
+		
+		<script type="text/javascript" th:src="@{/ui/w2ui-1.5.min.js}"></script>
+		<script type="text/javascript" th:inline="javascript">		
+		 var message = [[${arr}]];
+		    console.log(message);
+
+				   $('#grid').w2grid({ 
+							name: 'grid', 
+							// header: 'List of Panduan',
+							total: 10,
+							
+							show: {
+							//	 header         : true,
+								toolbar        : true,
+								footer         : false,
+								lineNumbers    : true,
+								// selectColumn   : true,
+							//	expandColumn   : true
+							},  
+							columns: [       
+								{ field: 'nama', caption: 'Nama', size: '120%' },
+								{ field: 'email', caption: 'Email', size: '100%' },
+								{ field: 'katasandi', caption: 'Katasandi', size: '100%' },
+								{ field: 'id_seq', caption: 'id_db', size: '120%' }
+							],
+							searches: [
+								{ type: 'int',  field: 'recid', caption: 'ID' },
+								{ type: 'text', field: 'nama', caption: 'Nama' },
+								{ type: 'text', field: 'email', caption: 'Email' },
+								{ type: 'text', field: 'katasandi', caption: 'Katasandi' },
+								{ type: 'text', field: 'id_seq', caption: 'id_db' }
+							],
+							menu: [
+							    { id: 1, text: 'View User', icon: 'fa fa-list'}, 
+								{ id: 2, text: 'Delete Record', icon: 'fa fa-minus'}
+							],
+							onMenuClick: function(event) {		
+							    var menuid = event.menuItem.id;
+								var sel = this.getSelection();
+								var sel_record = this.get(sel[0]);
+							    if(menuid == 1){					
+									openPopup(sel_record.id_seq,sel_record.nama,sel_record.email,sel_record.katasandi);
+								}else if(menuid == 2){
+									window.location.href=[[@{/user/delete}]]+'?id='+sel_record.id_seq;
+								}
+							}
+							// ,onDblClick: function(event) {
+							// 		var grid = this;
+							// 		event.onComplete = function() {
+							// 			var sel_rec_ids = grid.getSelection();
+							// 			if (sel_rec_ids.length) {
+							// 				var sel_record = grid.get(sel_rec_ids[0]);
+							// 				console.log('selected ID:', sel_record.ssertifikat, '/ selected Name:', sel_record.snama);
+							// 				openPopup(sel_record.ssertifikat);
+							// 			} else {
+							// 				console.log("Nothing selected!");
+							// 			}
+							// 		}
+							// }
+						});   
+						w2ui['grid'].add([(${arr})]);
+
+					//  w2ui['grid'].add([
+					///*  */ 		{ "recid": 1, "snama": "Stuart2", "snomor": "Motzart", "sjudul": "jdoe@gmail.com3", "slembaga":"ptkps","stanggal": "4/3/2012","ssertifikat":'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6CAIAAAAHjs1qAAAMV0lEQVR4Xu2SQapDORDEPnOzufncLLNMQLgaF077OS7QKgi5yOu/13//hnAJf/wphF8l5x4uIuceLiLnHi4i5x4uIuceLiLnHi4i5x4uIuceLiLnHi4i5x4uIuceLiLnHi4i5x4uIuceLiLnHi4i5x4uIuceLiLnHi4i5x4uIuceLiLnHi4i5x4uIuceLiLnHi4i5x4uIuceLiLnHi4i5x4uIuceLiLnHi4i5x4uIuceLiLnHi4i5x4uIuceLiLnHi4i5x4uIuceLiLnHi5i57n//f1zBFzuwbLu0/T8p8HlbeTca7jcg2Xdp+n5T4PL28i513C5B8u6T9PznwaXt5Fzr+FyD5Z1n6bnPw0ubyPnXsPlHizrPk3Pfxpc3kbOvYbLPVjWfZqe/zS4vI2cew2Xe7Cs+zQ9/2lweRs59xou92BZ92l6/tPg8jaeeO40e+CSs/bQ1P634ZK9e14590+45Kw9NLX/bbhk755Xzv0TLjlrD03tfxsu2bvnlXP/hEvO2kNT+9+GS/bueeXcP+GSs/bQ1P634ZK9e14590+45Kw9NLX/bbhk755Xzv0TLjlrD03tfxsu2bvnlXP/hEvO2kNT+9+GS/bueZ117jQ9WNZ9mj3+LCzrPk0PlnWfZhs597pPs8efhWXdp+nBsu7TbCPnXvdp9vizsKz7ND1Y1n2abeTc6z7NHn8WlnWfpgfLuk+zjZx73afZ48/Csu7T9GBZ92m2kXOv+zR7/FlY1n2aHizrPs02cu51n2aPPwvLuk/Tg2Xdp9lGzr3u0+zxZ2FZ92l6sKz7NNvIudd9mj1wid5D0/NnYVn3abaRc6/7NHvgEr2HpufPwrLu02wj5173afbAJXoPTc+fhWXdp9lGzr3u0+yBS/Qemp4/C8u6T7ONnHvdp9kDl+g9ND1/FpZ1n2YbOfe6T7MHLtF7aHr+LCzrPs02cu51n2YPXKL30PT8WVjWfZpt5NzrPs0euETvoen5s7Cs+zTbyLnXfZoaFnSHpoYF3aGp/VlY1n2abeTc6z5NDQu6Q1PDgu7Q1P4sLOs+zTZy7nWfpoYF3aGpYUF3aGp/FpZ1n2YbOfe6T1PDgu7Q1LCgOzS1PwvLuk+zjZx73aepYUF3aGpY0B2a2p+FZd2n2UbOve7T1LCgOzQ1LOgOTe3PwrLu02wj5173aWpY0B2aGhZ0h6b2Z2FZ92m2kXOv+zQ1LOgOTQ0LukNT+7OwrPs02zjp3L8Nl3h7WPBgWcOC11kFl+zd88q5f8Il3h4WPFjWsOB1VsEle/e8cu6fcIm3hwUPljUseJ1VcMnePa+c+ydc4u1hwYNlDQteZxVcsnfPK+f+CZd4e1jwYFnDgtdZBZfs3fPKuX/CJd4eFjxY1rDgdVbBJXv3vHLun3CJt4cFD5Y1LHidVXDJ3j2vnPsnXOLtYcGDZQ0LXmcVXLJ3z+uZ5/40uFzvp7nXfxpc3kbOvYbL9X6ae/2nweVt5NxruFzvp7nXfxpc3kbOvYbL9X6ae/2nweVt5NxruFzvp7nXfxpc3kbOvYbL9X6ae/2nweVt5NxruFzvp7nXfxpc3kbOvYbL9X6ae/2nweVt7Dz30+GH1J+TpvbDcnLuPjxcfb40tR+Wk3P34eHq86Wp/bCcnLsPD1efL03th+Xk3H14uPp8aWo/LCfn7sPD1edLU/thOTl3Hx6uPl+a2g/Lybn78HD1+dLUfljOznPnh/dgeW1/Fi7Re2hqfxaWPVhe228g574eLtF7aGp/FpY9WF7bbyDnvh4u0Xtoan8Wlj1YXttvIOe+Hi7Re2hqfxaWPVhe228g574eLtF7aGp/FpY9WF7bbyDnvh4u0Xtoan8Wlj1YXttvIOe+Hi7Re2hqfxaWPVhe228g574eLtF7aGp/FpY9WF7bb+CJ507zmXC5t58F3aG51z+InLsPl3v7WdAdmnv9g8i5+3C5t58F3aG51z+InLsPl3v7WdAdmnv9g8i5+3C5t58F3aG51z+InLsPl3v7WdAdmnv9g8i5+3C5t58F3aG51z+InLsPl3v7WdAdmnv9g/iFc2dBd2j2wCV6D03tz8KyB8tr+wvJuffBJXoPTe3PwrIHy2v7C8m598Eleg9N7c/CsgfLa/sLybn3wSV6D03tz8KyB8tr+wvJuffBJXoPTe3PwrIHy2v7C8m598Eleg9N7c/CsgfLa/sLybn3wSV6D03tz8KyB8tr+wvJuffBJXoPTe3PwrIHy2v7Cznp3Glq/9twibeHBQ+We/oHkXP34RJvDwseLPf0DyLn7sMl3h4WPFju6R9Ezt2HS7w9LHiw3NM/iJy7D5d4e1jwYLmnfxA5dx8u8faw4MFyT/8gcu4+XOLtYcGD5Z7+QeTcfbjE28OCB8s9/YM46dxHsLC2M4IFrzOC5Z7+CBY0LGwn5153RrDgdUaw3NMfwYKGhe3k3OvOCBa8zgiWe/ojWNCwsJ2ce90ZwYLXGcFyT38ECxoWtpNzrzsjWPA6I1ju6Y9gQcPCdnLudWcEC15nBMs9/REsaFjYTs697oxgweuMYLmnP4IFDQvbybnXnREseJ0RLPf0R7CgYWE7O8/9dPiBPVj2YLmnP4KF7eTcffiBPVj2YLmnP4KF7eTcffiBPVj2YLmnP4KF7eTcffiBPVj2YLmnP4KF7eTcffiBPVj2YLmnP4KF7eTcffiBPVj2YLmnP4KF7eTcffiBPVj2YLmnP4KF7eTcffiBPVj2YLmnP4KF7ew8d/5Bz4TL9X6aPf4sLJ/VN8i513C53k+zx5+F5bP6Bjn3Gi7X+2n2+LOwfFbfIOdew+V6P80efxaWz+ob5NxruFzvp9njz8LyWX2DnHsNl+v9NHv8WVg+q2+Qc6/hcr2fZo8/C8tn9Q1y7jVcrvfT7PFnYfmsvsETz51mD1yi99Bc68/C8ln9BnLub7hE76G51p+F5bP6DeTc33CJ3kNzrT8Ly2f1G8i5v+ESvYfmWn8Wls/qN5Bzf8Mleg/Ntf4sLJ/VbyDn/oZL9B6aa/1ZWD6r30DO/Q2X6D001/qzsHxWv4Gc+xsu0XtorvVnYfmsfgMnnTtND5Z1n6b2Z2FZ92n+ht9Azr3u09T+LCzrPs3f8BvIudd9mtqfhWXdp/kbfgM597pPU/uzsKz7NH/DbyDnXvdpan8WlnWf5m/4DeTc6z5N7c/Csu7T/A2/gZx73aep/VlY1n2av+E3kHOv+zS1PwvLuk/zN/wGcu51n+Za+KJ+l+ZZ/kZy7nWf5lr4on6X5ln+RnLudZ/mWviifpfmWf5Gcu51n+Za+KJ+l+ZZ/kZy7nWf5lr4on6X5ln+RnLudZ/mWviifpfmWf5Gcu51n+Za+KJ+l+ZZ/kZy7nWf5lr4on6X5ln+RnLudZ+m549gQXdoerDs9VnQHZpt5NzrPk3PH8GC7tD0YNnrs6A7NNvIudd9mp4/ggXdoenBstdnQXdotpFzr/s0PX8EC7pD04Nlr8+C7tBsI+de92l6/ggWdIemB8tenwXdodlGzr3u0/T8ESzoDk0Plr0+C7pDs42ce92n6fkjWNAdmh4se30WdIdmGzn3uk/T80ewoDs0PVj2+izoDs02Tjr3b8Mleg/NvXDh2p0sH0fO/Q2X6D0098KFa3eyfBw59zdcovfQ3AsXrt3J8nHk3N9wid5Dcy9cuHYny8eRc3/DJXoPzb1w4dqdLB9Hzv0Nl+g9NPfChWt3snwcOfc3XKL30NwLF67dyfJx5NzfcIneQ3MvXLh2J8vH8cRzfxpcrvfT1P4IFrzOCJa9Pgu6Q7ONnHsNl+v9NLU/ggWvM4Jlr8+C7tBsI+dew+V6P03tj2DB64xg2euzoDs028i513C53k9T+yNY8DojWPb6LOgOzTZy7jVcrvfT1P4IFrzOCJa9Pgu6Q7ONnHsNl+v9NLU/ggWvM4Jlr8+C7tBsI+dew+V6P03tj2DB64xg2euzoDs028i513C53k9T+yNY8DojWPb6LOgOzTZ2nnsIzeTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0Xk3MNF5NzDReTcw0X8D7huzRgLNc0kAAAAAElFTkSuQmCC' },
+					// 		{ "recid": 2, "snama": "Stuart2", "snomor": "Motzart", "sjudul": "jdoe@gmail.com3", "slembaga":"ptkps","stanggal": "4/3/2012","ssertifikat":'' }
+					// ]);
+
+						w2ui['grid'].hideColumn('sradio','id_seq');
+						function openPopup(id,nama,email,katasandi) {				
+							$("#id_seq").val(id);
+							$("#nama").val(""+nama);
+							$("#email").val(""+email); 
+							$("#katasandi").val (""+katasandi);
+							$('#m_modal_4').modal('show');
+							
+			/* 				w2popup.open({
+										title: 'Biodata',
+										width: 720,
+										height: 410,
+										showMax: true,
+										body: 
+											'<div > '+"\n"+
+											'        <div class="col-sm-5" style="padding-left: 8px;">'+"\n"+	
+											'               <div class="m-widget5">'+"\n"+	
+											'                    <div class="m-widget5__item">'+"\n"+
+											'			             <div class="m-widget5__content">'+"\n"+
+									
+											'				        </div>'+"\n"+
+											'		         	</div>'+"\n"+
+											'		        </div>'+"\n"+
+											'           </div>'+"\n"+
+											'       </div>'+"\n"+
+											'  </div>',
+										onToggle(event) {
+											event.done(() => { w2ui.layout.resize() })
+										}
+									})
+									.then(() => {
+										$('#w2ui-popup #main').w2render('layout')
+										w2ui.layout.html('left', w2ui.sidebar)
+										w2ui.layout.html('main', w2ui.grid)
+									})  */
+							}
+			</script>
+	</body>
+    
+</html>

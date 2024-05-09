@@ -1,0 +1,187 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+            xmlns:th="http://www.thymeleaf.org" 
+            xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+            xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+	<!-- begin::Head -->
+	<head>
+		<meta charset="utf-8" />
+		<title>PT Duaz Solusi</title>
+		<meta name="description" content="Latest updates and statistic charts">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" th:href="@{/ui/metronic_v5/evan.ico}" type="image/x-icon"  />
+
+		<!--begin::Web font -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+			WebFont.load({
+				google: {
+					"families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]
+				},
+				active: function() {
+					sessionStorage.fonts = true;
+				}
+			});
+		</script>
+
+		<!--end::Web font -->
+
+		<!--begin::Base Styles -->
+		<link th:href="@{/ui/metronic_v5/assets/vendors/custom/jqvmap/jqvmap.bundle.css}" rel="stylesheet" type="text/css" />
+		<link th:href="@{/ui/metronic_v5/assets/vendors/base/vendors.bundle.css}" rel="stylesheet" type="text/css" />
+		<link th:href="@{/ui/metronic_v5/assets/demo/default/base/style.bundle.css}" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" th:href="@{/ui/w2ui-1.5.min.css}" />
+	</head>
+	<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--fixed m-aside-left--offcanvas m-aside-left--minimize m-brand--minimize m-footer--push m-aside--offcanvas-default">
+		<div class="m-grid m-grid--hor m-grid--root m-page">
+			 <div  th:insert="ptaz_header"></div>
+			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+				<button class="m-aside-left-close  m-aside-left-close--skin-dark " id="m_aside_left_close_btn">
+					<i class="la la-close"></i>
+				</button>				
+				<div  th:insert="ptaz_menu_left"></div>
+				
+				
+				
+				
+				
+				
+				<div class="m-grid__item m-grid__item--fluid m-wrapper">
+
+					<!-- BEGIN: Subheader -->
+					<div class="m-subheader ">
+						<div class="d-flex align-items-center">
+							<div class="mr-auto">
+								<h3 class="m-subheader__title m-subheader__title--separator">User</h3>
+								<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+									<li class="m-nav__item m-nav__item--home">
+										<a href="#" class="m-nav__link m-nav__link--icon">
+											<i class="m-nav__link-icon la la-home"></i>
+										</a>
+									</li>
+									<li class="m-nav__separator">-</li>
+									<li class="m-nav__item">
+										<a href="#" class="m-nav__link">
+											<span class="m-nav__link-text">Registrasi</span>
+										</a>
+									</li>
+									<li class="m-nav__separator">-</li>
+									<li class="m-nav__item">
+										<a href="#" class="m-nav__link">
+											<span class="m-nav__link-text">Form</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- END: Subheader -->
+					<div class="m-content">
+						<div class="m-portlet">
+						
+						
+						
+								<div class="m-portlet__head">
+									<div class="m-portlet__head-caption">
+										<div class="m-portlet__head-title">
+											<span class="m-portlet__head-icon">
+												<i class="la la-leaf"></i>
+											</span>
+											<h3 class="m-portlet__head-text">
+												Form Registrasi
+											</h3>
+										</div>
+									</div>
+								</div>							
+								<form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed" th:action="@{/user/save}"   id="frm" name="frm" method="post">
+										<div class="m-portlet__body">
+										
+										
+											<div class="form-group m-form__group row">
+												<div class="col-lg-4">
+													<label>Name:</label>
+													<input type="text" th:name="nama" class="form-control m-input" placeholder="Enter nama">
+													<span class="m-form__help">Please enter your name</span>
+												</div>
+												<div class="col-lg-4">
+													<label class="">Email:</label>
+													<input type="email" th:name="email" class="form-control m-input" placeholder="Enter email">
+													<span class="m-form__help">Please enter your email</span>
+												</div>
+												<div class="col-lg-4">
+													<label>Kata sandi:</label>
+													<input type="katasandi" th:name="katasandi" class="form-control m-input" id="exampleInputPassword1" placeholder="Enter katasandi">
+													<span class="m-form__help">Please enter your katasandi</span>
+												</div>
+											</div>										
+											
+										</div>
+										
+										
+										
+										<div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+											<div class="m-form__actions m-form__actions--solid" style="background-color: white;">
+												<div class="row">
+													<div class="col-lg-4"></div>
+													<div class="col-lg-12">
+														<button type="submit" class="btn btn-success m-btn m-btn--custom">Submit</button>
+														<button type="reset" class="btn btn-danger m-btn m-btn--custom">Cancel</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+									</form>
+								
+								
+							
+							
+							
+							
+							
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			<div  th:insert="ptaz_footer"></div>
+		</div>
+		<div id="m_scroll_top" class="m-scroll-top">
+			<i class="la la-arrow-up"></i>
+		</div>
+		<div  th:insert="ptaz_sticky"></div>
+		
+		<script th:src="@{/ui/metronic_v5/assets/vendors/base/vendors.bundle.js}" type="text/javascript"></script>
+		<script th:src="@{/ui/metronic_v5/assets/demo/default/base/scripts.bundle.js}" type="text/javascript"></script>
+		<script th:src="@{/ui/metronic_v5/assets/vendors/custom/jqvmap/jqvmap.bundle.js}" type="text/javascript"></script>
+		<script th:src="@{/ui/metronic_v5/assets/demo/default/custom/components/maps/jqvmap.js}" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+		jQuery('#vmap').vectorMap({
+		    map: 'world_en',
+		    backgroundColor: null,
+		    color: '#ffffff',
+		    hoverOpacity: 0.7,
+		    selectedColor: '#666666',
+		    enableZoom: true,
+		    showTooltip: false,
+		    values: sample_data,
+		    scaleColors: ['#C8EEFF', '#006491'],
+		    normalizeFunction: 'polynomial',
+		});
+		</script>
+
+		<!--end::Base Scripts -->
+	</body>
+
+	<!-- end::Body -->
+</html>

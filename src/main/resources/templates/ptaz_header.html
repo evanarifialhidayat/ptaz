@@ -1,0 +1,172 @@
+<header id="m_header" class="m-grid__item    m-header " m-minimize-offset="200" m-minimize-mobile-offset="200">
+				<div class="m-container m-container--fluid m-container--full-height">
+					<div class="m-stack m-stack--ver m-stack--desktop">
+
+						<!-- BEGIN: Brand -->
+						<div class="m-stack__item m-brand  m-brand--skin-dark " >
+							<div class="m-stack m-stack--ver m-stack--general">
+								<div class="m-stack__item m-stack__item--middle m-brand__logo">
+								
+								<a th:href="@{'/dashboard'}">
+									<!-- <svg width="172" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M55.014 8.62v17.046h-3.65V17.46h-7.576v8.206h-3.651V8.619h3.65v6.625h7.576V8.619h3.651ZM65.152 19.284l-1.79.22c-.834.1-1.511.357-2.027.78-.516.421-.771.946-.771 1.585 0 .565.175 1.02.524 1.36.346.34.758.508 1.238.508.373 0 .736-.045 1.081-.144a1.94 1.94 0 0 0 .893-.532c.269-.267.48-.607.632-1.037.148-.43.225-.987.225-1.667v-1.073h-.005Zm.799 6.382c-.108-.065-.23-.204-.36-.434-.134-.233-.206-.455-.206-.684a4.244 4.244 0 0 1-1.897 1.094 7.82 7.82 0 0 1-2.1.29c-1.26 0-2.318-.348-3.148-1.056-.834-.71-1.256-1.672-1.256-2.889 0-1.118.444-2.097 1.323-2.937.88-.836 2.154-1.34 3.826-1.495l2.988-.316c0-1.04-.256-1.75-.763-2.13a2.757 2.757 0 0 0-1.718-.574 5.36 5.36 0 0 0-2.224.472 8.521 8.521 0 0 0-1.933 1.208l-.62-2.462a8.557 8.557 0 0 1 2.257-1.024c.789-.23 1.7-.34 2.731-.34.637 0 1.3.082 1.987.241.686.164 1.3.43 1.853.803.57.377 1.031.869 1.385 1.475.355.607.539 1.36.539 2.253v5.31c0 .504.04 1.04.13 1.61.09.57.269 1.094.538 1.581h-3.332v.004ZM74.696 12.634v1.119a5.053 5.053 0 0 1 1.687-1.012 5.833 5.833 0 0 1 2.018-.352c1.705 0 3.05.45 4.041 1.364.987.91 1.476 2.155 1.476 3.728v8.181h-3.49v-7.718c0-.987-.246-1.794-.73-2.413-.494-.615-1.18-.926-2.073-.926-.82 0-1.507.307-2.067.918-.561.602-.844 1.45-.844 2.52v7.62h-3.467V12.633h3.45ZM93.947 19.284l-1.785.22c-.834.1-1.511.357-2.023.78-.52.421-.776.946-.776 1.585 0 .565.175 1.02.52 1.36a1.7 1.7 0 0 0 1.239.508c.376 0 .73-.045 1.08-.144.346-.094.642-.274.893-.532.265-.267.471-.607.628-1.037.153-.43.224-.987.224-1.667v-1.073Zm.803 6.382c-.108-.065-.229-.204-.363-.434a1.34 1.34 0 0 1-.198-.684 4.287 4.287 0 0 1-1.888 1.094 7.941 7.941 0 0 1-2.112.29c-1.265 0-2.31-.348-3.15-1.056-.829-.71-1.246-1.672-1.246-2.889 0-1.118.435-2.097 1.319-2.937.879-.836 2.157-1.34 3.826-1.495l2.982-.316c0-1.04-.25-1.75-.753-2.13a2.778 2.778 0 0 0-1.722-.574 5.38 5.38 0 0 0-2.23.472c-.7.32-1.345.72-1.933 1.208l-.61-2.462a8.568 8.568 0 0 1 2.247-1.024c.799-.23 1.705-.34 2.745-.34.637 0 1.296.082 1.978.241.691.164 1.306.43 1.857.803.57.377 1.027.869 1.386 1.475.359.607.534 1.36.534 2.253v5.31c0 .504.045 1.04.13 1.61.09.57.27 1.094.534 1.581H94.75v.004ZM107.578 17.845v5.699h1.92c.928 0 1.695-.246 2.305-.742.615-.495.92-1.204.92-2.13 0-1.024-.368-1.75-1.095-2.18-.735-.434-1.552-.647-2.449-.647h-1.601Zm0-7.108v4.994h1.363c1.01 0 1.777-.246 2.284-.745.52-.496.78-1.156.78-1.987 0-.68-.215-1.23-.65-1.643-.435-.414-1.059-.623-1.857-.623h-1.92v.004Zm2.265 14.929h-5.947V8.619h6.346c1.561 0 2.857.365 3.885 1.09 1.018.733 1.525 1.675 1.525 2.827 0 1.155-.305 2.064-.933 2.728-.615.668-1.306 1.119-2.05 1.364 1.09.242 2 .693 2.745 1.336.744.651 1.121 1.553 1.121 2.708 0 1.508-.57 2.72-1.718 3.63-1.144.91-2.803 1.364-4.974 1.364ZM126.376 19.284l-1.785.22c-.834.1-1.507.357-2.027.78-.516.421-.772.946-.772 1.585 0 .565.175 1.02.516 1.36.345.34.767.508 1.242.508.373 0 .736-.045 1.081-.144.346-.094.642-.274.893-.532.269-.267.471-.607.628-1.037.152-.43.229-.987.229-1.667v-1.073h-.005Zm.799 6.382c-.104-.065-.229-.204-.364-.434a1.38 1.38 0 0 1-.193-.684 4.299 4.299 0 0 1-1.892 1.094 7.89 7.89 0 0 1-2.109.29c-1.264 0-2.309-.348-3.148-1.056-.834-.71-1.256-1.672-1.256-2.889 0-1.118.448-2.097 1.328-2.937.879-.836 2.153-1.34 3.826-1.495l2.982-.316c0-1.04-.251-1.75-.758-2.13a2.756 2.756 0 0 0-1.718-.574c-.789 0-1.525.156-2.233.472a8.492 8.492 0 0 0-1.933 1.208l-.611-2.462a8.439 8.439 0 0 1 2.248-1.024c.798-.23 1.709-.34 2.74-.34.637 0 1.301.082 1.983.241.686.164 1.3.43 1.852.803.57.377 1.027.869 1.391 1.475.354.607.529 1.36.529 2.253v5.31c0 .504.045 1.04.139 1.61.085.57.26 1.094.534 1.581h-3.337v.004ZM135.925 12.634v1.119a5.095 5.095 0 0 1 1.687-1.012 5.83 5.83 0 0 1 2.018-.352c1.709 0 3.05.45 4.041 1.364.987.91 1.472 2.155 1.472 3.728v8.181h-3.486v-7.718c0-.987-.246-1.794-.735-2.413-.489-.615-1.175-.926-2.072-.926-.817 0-1.503.307-2.064.918-.565.602-.838 1.45-.838 2.52v7.62h-3.468V12.633h3.445ZM147.601 25.667V7.887h3.467v9.328l4.539-4.58h3.705l-5.522 5.58 6.212 7.452h-3.969l-4.965-5.916v5.916h-3.467ZM25.22 18.96a5.193 5.193 0 0 0-.45-1.397c-.677-1.336-1.619-2.454-3.032-3.208a7.367 7.367 0 0 0-7.024.041c-.986.545-1.794 1.327-2.314 2.261-.18.32-.323.652-.435.992-.574 1.66-.552 3.896.48 5.412.336.495.825.917 1.417 1.13.597.213 1.306.189 1.84-.13.69-.406.816-1.18.685-1.873-.16-.885-.287-1.753.072-2.622.112-.274.274-.54.507-.745.144-.123.31-.222.489-.3a2.252 2.252 0 0 1 1.216-.184c.717.107 1.305.619 1.628 1.217.318.594.403 1.274.44 1.938.152 2.896-.606 5.895-1.418 8.677-.08.286-.166.573-.256.856-.067.221-.188.504-.04.717.063.094.17.16.283.196.466.177.856-.09 1.17-.38 1.857-1.709 3.05-3.913 3.866-6.178.301-.848.566-1.709.74-2.59.234-1.192.373-2.564.135-3.83ZM38.536 5.571c0-.434-.422-.72-.875-.708-.462.016-.888.23-1.305.377-8.182 2.843-17.408 3.384-26.029 2.245-1.475-.197-2.969-.467-4.453-.676-.924-.131-1.844-.324-2.781-.39-.799-.057-1.79-.081-2.436.422-.848.672-.79 1.942-.31 2.782.58 1.004 1.593 1.762 2.647 2.335 1.027.562 2.247 1.156 3.472 1.082 3.292-.193 6.58-.48 9.854-.869 5.584-.66 11.437-1.286 16.685-3.265 1.714-.647 3.409-1.45 4.876-2.499.273-.18.655-.48.655-.836Z" fill="#fff"></path><path d="M15.073 3.011c0 1.622 1.44 2.942 3.22 2.942 1.777 0 3.217-1.32 3.217-2.942 0-.242-.059-.487-.17-.705-.279-.536-.588-.794-.561-1.433C20.823.008 19.612 0 18.957 0c-.708 0-1.466.086-2.108.385-.51.234-.95.598-1.264 1.037-.319.45-.498.983-.512 1.52v.07" fill="#fff">
+											</path>
+									</svg> -->
+									
+							<!-- 		<h3 class="m-subheader__title m-subheader__title--separator">PT Surya Madistrindo</h3> -->
+									 <img alt="" th:src="@{/ui/metronic_v5/logo1.png}" style="width: 40%; height: 70%;" />
+									
+								</a>
+								
+									<!-- <a href="../../../index.html" class="m-brand__logo-wrapper">
+										<img alt="" th:src="@{/ui_profile/images/evan.ico}" style="width: 18%; height: 30%;" />
+									</a> -->
+								</div>
+								<div class="m-stack__item m-stack__item--middle m-brand__tools">
+
+									<!-- BEGIN: Left Aside Minimize Toggle -->
+									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block m-brand__toggler--active ">
+										<span></span>
+									</a>
+
+									<!-- END -->
+
+									<!-- BEGIN: Responsive Aside Left Menu Toggler -->
+									<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
+										<span></span>
+									</a>
+
+									<!-- END -->
+
+									<!-- BEGIN: Responsive Header Menu Toggler -->
+									<a id="m_aside_header_menu_mobile_toggle" href="javascript:;" class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block">
+										<span></span>
+									</a>
+
+									<!-- END -->
+
+									<!-- BEGIN: Topbar Toggler -->
+									<a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" class="m-brand__icon m--visible-tablet-and-mobile-inline-block">
+										<i class="flaticon-more"></i>
+									</a>
+
+									<!-- BEGIN: Topbar Toggler -->
+								</div>
+							</div>
+						</div>
+
+						<!-- END: Brand -->
+						<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
+
+							<!-- BEGIN: Horizontal Menu -->
+							<button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-dark " id="m_aside_header_menu_mobile_close_btn">
+								<i class="la la-close"></i>
+							</button>
+							<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark ">
+								<ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
+									<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true">
+										<a href="javascript:;" class="m-menu__link m-menu__toggle">
+											<i class="m-menu__link-icon flaticon-add"></i>
+											<span class="m-menu__link-text">Apps</span>
+											<i class="m-menu__hor-arrow la la-angle-down"></i>
+											<i class="m-menu__ver-arrow la la-angle-right"></i>
+										</a>
+										<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
+											<span class="m-menu__arrow m-menu__arrow--adjust"></span>
+											<ul class="m-menu__subnav">
+												<li class="m-menu__item " aria-haspopup="true">
+													<a href="#" class="m-menu__link ">
+														<i class="m-menu__link-icon flaticon-file"></i>
+														<span class="m-menu__link-text">Web</span>
+													</a>
+												</li>
+												<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
+													<a href="#" class="m-menu__link ">
+														<i class="m-menu__link-icon flaticon-diagram"></i>
+														<span class="m-menu__link-title">
+															<span class="m-menu__link-wrap">
+																<span class="m-menu__link-text">Generate Reports</span>
+																<span class="m-menu__link-badge">
+																	<span class="m-badge m-badge--success">2</span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</li>
+												<li class="m-menu__item  m-menu__item--submenu" m-menu-submenu-toggle="hover" m-menu-link-redirect="1" aria-haspopup="true">
+													<a href="javascript:;" class="m-menu__link m-menu__toggle">
+														<i class="m-menu__link-icon flaticon-network"></i>
+														<span class="m-menu__link-text">Mobile</span>
+														<i class="m-menu__hor-arrow la la-angle-right"></i>
+														<i class="m-menu__ver-arrow la la-angle-right"></i>
+													</a>
+													<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
+														<span class="m-menu__arrow "></span>
+														<ul class="m-menu__subnav">
+															<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
+																<a href="#" class="m-menu__link ">
+																	<span class="m-menu__link-text">Windows</span>
+																</a>
+															</li>
+															<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
+																<a href="#" class="m-menu__link ">
+																	<span class="m-menu__link-text">Android</span>
+																</a>
+															</li>
+															<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
+																<a href="#" class="m-menu__link ">
+																	<span class="m-menu__link-text">Ios</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</li>
+												<li class="m-menu__item  m-menu__item--submenu" m-menu-submenu-toggle="hover" m-menu-link-redirect="1" aria-haspopup="true">
+													<a href="#" class="m-menu__link m-menu__toggle">
+														<i class="m-menu__link-icon flaticon-map"></i>
+														<span class="m-menu__link-text">Lib</span>
+														<i class="m-menu__hor-arrow la la-angle-right"></i>
+														<i class="m-menu__ver-arrow la la-angle-right"></i>
+													</a>
+													<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
+														<span class="m-menu__arrow "></span>
+														<ul class="m-menu__subnav">
+															<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
+																<a href="#" class="m-menu__link ">
+																	<span class="m-menu__link-text">Windows</span>
+																</a>
+															</li>
+															<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
+																<a href="#" class="m-menu__link ">
+																	<span class="m-menu__link-text">Android</span>
+																</a>
+															</li>
+															<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
+																<a href="#" class="m-menu__link ">
+																	<span class="m-menu__link-text">Ios</span>
+																</a>
+															</li>
+															<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
+																<a href="#" class="m-menu__link ">
+																	<span class="m-menu__link-text">Linux</span>
+																</a>
+															</li>
+															<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
+																<a href="#" class="m-menu__link ">
+																	<span class="m-menu__link-text">Desktop</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<!-- END: Horizontal Menu -->
+						</div>
+					</div>
+				</div>
+			</header>
