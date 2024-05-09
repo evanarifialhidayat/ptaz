@@ -6,7 +6,12 @@
 
 Link : http://203.194.113.181:7000
 
-<a href="https://awesome-github-readme-profile.netlify.app"><img src="https://raw.githubusercontent.com/elangosundar/awesome-README-templates/master/awesome-github-profile.png" alt="Awesome README Templates" /></a>
+<a href="https://github.com/evanarifialhidayat/ptaz/blob/main/dashboard.png?raw=true"><img src="https://github.com/evanarifialhidayat/ptaz/blob/main/dashboard.png?raw=true"/></a>
+<a href="https://github.com/evanarifialhidayat/ptaz/blob/main/listapi.png?raw=true"><img src="https://github.com/evanarifialhidayat/ptaz/blob/main/listapi.png?raw=true"/></a>
+<a href="https://github.com/evanarifialhidayat/ptaz/blob/main/loginapi.png?raw=true"><img src="https://github.com/evanarifialhidayat/ptaz/blob/main/loginapi.png?raw=true"/></a>
+<a href="https://github.com/evanarifialhidayat/ptaz/blob/main/updateapi.png?raw=true"><img src="https://github.com/evanarifialhidayat/ptaz/blob/main/updateapi.png?raw=true"/></a>
+<a href="https://github.com/evanarifialhidayat/ptaz/blob/main/registrasiapi.png?raw=true"><img src="https://github.com/evanarifialhidayat/ptaz/blob/main/registrasiapi.png?raw=true"/></a>
+<a href="https://github.com/evanarifialhidayat/ptaz/blob/main/deleteapi.png?raw=true"><img src="https://github.com/evanarifialhidayat/ptaz/blob/main/deleteapi.png?raw=true"/></a>
 
 # API
 
